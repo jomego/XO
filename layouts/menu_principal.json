@@ -273,8 +273,8 @@
 							"isEnabled": true,
 							"parameters": {
 								"color": [
-									0,
-									0,
+									1,
+									0.45098039215686275,
 									0,
 									1
 								],
@@ -289,10 +289,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 423,
-						"y": 193,
-						"width": 250,
-						"height": 250,
+						"x": 440,
+						"y": 564,
+						"width": 439,
+						"height": 62,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -324,8 +324,8 @@
 							"isEnabled": false,
 							"parameters": {
 								"color": [
-									0,
-									0,
+									1,
+									0.45098039215686275,
 									0,
 									1
 								],
@@ -340,10 +340,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 430,
-						"y": 436,
-						"width": 250,
-						"height": 250,
+						"x": 441,
+						"y": 681,
+						"width": 321,
+						"height": 58,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -375,8 +375,8 @@
 							"isEnabled": false,
 							"parameters": {
 								"color": [
-									0,
-									0,
+									1,
+									0.45098039215686275,
 									0,
 									1
 								],
@@ -391,10 +391,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 456,
-						"y": 670,
-						"width": 250,
-						"height": 250,
+						"x": 448,
+						"y": 801,
+						"width": 284,
+						"height": 56,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -426,8 +426,8 @@
 							"isEnabled": false,
 							"parameters": {
 								"color": [
-									0,
-									0,
+									1,
+									0.45098039215686275,
 									0,
 									1
 								],
@@ -442,10 +442,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 453,
-						"y": 921,
-						"width": 250,
-						"height": 250,
+						"x": 451,
+						"y": 906,
+						"width": 168,
+						"height": 52,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -468,7 +468,7 @@
 				1,
 				1,
 				1,
-				0
+				1
 			],
 			"backgroundColor": [
 				0.3686274509803922,
