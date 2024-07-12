@@ -1,0 +1,14 @@
+{
+	"name": "Mando",
+	"plugin-id": "gamepad",
+	"sid": 302793065061161,
+	"singleglobal-inst": {
+		"type": "Mando",
+		"properties": {
+			"analog-deadzone": 25
+		},
+		"uid": 9,
+		"sid": 835581581400610,
+		"tags": ""
+	}
+}

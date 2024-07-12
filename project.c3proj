@@ -1,0 +1,311 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 39900,
+	"name": "menus",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Botón",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Greenworks",
+			"name": "[Greenworks]",
+			"author": "Scirra",
+			"bundled": false,
+			"version": "1.0.86.0"
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Steamworks_Ext",
+			"name": "[Steamworks (WebView2)]",
+			"author": "Scirra",
+			"bundled": false,
+			"version": "1.0.1.0"
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Mando",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "video",
+			"name": "Vídeo",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "[Better Outline]",
+			"author": "skymen",
+			"bundled": false,
+			"version": "2.0.0.3"
+		}
+	],
+	"uniqueId": "c3a42lpxm5a",
+	"objectTypes": {
+		"items": [
+			"videoss",
+			"menuestatico",
+			"Teclado",
+			"videoss2",
+			"videoss3",
+			"fotograma_menu",
+			"Abrir",
+			"cerrar",
+			"Mando",
+			"Sprite",
+			"menu_opcion_1",
+			"menu_opcion_2",
+			"menu_opcion_3",
+			"menu_opcion_4",
+			"SteamworksWebView2",
+			"Greenworks"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"menu"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"menu_principal"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"e_menu_principal"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [
+				{
+					"name": "espera.webm",
+					"type": "video/webm",
+					"sid": 484811911706791,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Intro.webm",
+					"type": "video/webm",
+					"sid": 560597519805314,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu_inverso.webm",
+					"type": "video/webm",
+					"sid": 942033311802528,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "menu.webm",
+					"type": "video/webm",
+					"sid": 152179315557984,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icono-16.png",
+					"type": "image/png",
+					"sid": 163270906648615,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icono-32.png",
+					"type": "image/png",
+					"sid": 791905008247636,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icono-64.png",
+					"type": "image/png",
+					"sid": 360676439763699,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icono-128.png",
+					"type": "image/png",
+					"sid": 141691913558346,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icono-256.png",
+					"type": "image/png",
+					"sid": 875246285395617,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icono-512.png",
+					"type": "image/png",
+					"sid": 617837617856911,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "logo-carga.png",
+					"type": "image/png",
+					"sid": 987806913887393,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "MEnuEstatico.jpg",
+					"type": "image/jpeg",
+					"sid": 770935267694237,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Línea de tiempo 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": null
+}

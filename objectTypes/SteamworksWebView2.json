@@ -1,0 +1,16 @@
+{
+	"name": "SteamworksWebView2",
+	"plugin-id": "Steamworks_Ext",
+	"sid": 507291339359663,
+	"singleglobal-inst": {
+		"type": "SteamworksWebView2",
+		"properties": {
+			"app-id": "",
+			"development-mode": true,
+			"enable-overlay": true
+		},
+		"uid": 12,
+		"sid": 167702859743425,
+		"tags": ""
+	}
+}

@@ -1,0 +1,945 @@
+{
+	"name": "e_menu_principal",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "menu_Activo",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "comprobar si el menu esta activo",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 324763543205819
+		},
+		{
+			"eventType": "variable",
+			"name": "menu_seleccion",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "numero de la opcion del menu",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 673973583321396
+		},
+		{
+			"eventType": "variable",
+			"name": "seleccion_a",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "control para los videos de carga para efecto camara del menu",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 998727834395753
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 597211286321635
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 139497115741683,
+					"parameters": {
+						"layer": "\"menu\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-looping",
+					"objectClass": "videoss",
+					"sid": 524252070828007,
+					"parameters": {
+						"mode": "looping"
+					}
+				}
+			],
+			"sid": 774037550800001
+		},
+		{
+			"eventType": "comment",
+			"text": "ABRIR"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Mando",
+					"sid": 232381484627983,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-a"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 451655219017559,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 546767137522597,
+							"parameters": {
+								"variable": "seleccion_a",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "videoss",
+							"sid": 810604129017063
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 365034981847336
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 127512273676928,
+							"parameters": {
+								"layer": "\"menu\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "videoss2",
+							"sid": 198629711829770
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 395487525067143,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 900527899421755,
+							"parameters": {
+								"layer": "\"video 1\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 807123450735910,
+							"parameters": {
+								"variable": "seleccion_a",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 976654746876660,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "menu_opcion_1",
+							"sid": 278017538113750,
+							"parameters": {
+								"mode": "enable",
+								"effect": "\"BetterOutline\""
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "menu_opcion_2",
+							"sid": 844173673291103,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"BetterOutline\""
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "menu_opcion_3",
+							"sid": 110327122661292,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"BetterOutline\""
+							}
+						},
+						{
+							"id": "set-effect-enabled",
+							"objectClass": "menu_opcion_4",
+							"sid": 552650282059816,
+							"parameters": {
+								"mode": "disable",
+								"effect": "\"BetterOutline\""
+							}
+						}
+					],
+					"sid": 943444518875667
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-ended",
+					"objectClass": "videoss2",
+					"sid": 508762803135011
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 929204053327122,
+					"parameters": {
+						"variable": "seleccion_a",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 986091176371696
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 783791126259097,
+					"parameters": {
+						"layer": "\"menu\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 365362845252984,
+					"parameters": {
+						"layer": "\"menu\"",
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 627222400593818,
+					"parameters": {
+						"layer": "\"video 1\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 768766147188695,
+					"parameters": {
+						"layer": "\"video 2\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 304824705404602,
+					"parameters": {
+						"variable": "seleccion_a",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 120306836871771,
+					"parameters": {
+						"variable": "menu_Activo",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 164249275367877
+		},
+		{
+			"eventType": "comment",
+			"text": "CERRAR"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Mando",
+					"sid": 244746214770817,
+					"parameters": {
+						"gamepad": "0",
+						"button": "button-b"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 580776724328842,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 340236873272062,
+							"parameters": {
+								"variable": "seleccion_a",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 679687057797848
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "videoss3",
+							"sid": 429664368111928
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 321998479939773,
+							"parameters": {
+								"layer": "\"video 2\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 918889415691024,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 992769183809949,
+							"parameters": {
+								"layer": "\"menu\"",
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 896521303585011,
+							"parameters": {
+								"layer": "\"menu\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 181834598782987,
+							"parameters": {
+								"layer": "\"video 1\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 482909749423745,
+							"parameters": {
+								"variable": "seleccion_a",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 338694829482562,
+							"parameters": {
+								"variable": "menu_Activo",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 455691752879360
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-ended",
+					"objectClass": "videoss3",
+					"sid": 170057530656866
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 324950758942497,
+					"parameters": {
+						"variable": "seleccion_a",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 707900765536470
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "videoss",
+					"sid": 593754882671565
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 543020118052434,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 449425715816998,
+					"parameters": {
+						"layer": "\"video0\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 366567262863309,
+					"parameters": {
+						"layer": "\"video 2\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 511116694975570,
+					"parameters": {
+						"variable": "seleccion_a",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 665004259457951,
+					"parameters": {
+						"variable": "menu_seleccion",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 378543306951493
+		},
+		{
+			"eventType": "comment",
+			"text": "MENU"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Mando",
+					"sid": 954002567413051,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-down"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 869540941196693,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 730907122308415,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"comparison": 2,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 271545931651348,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 951313137728951
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-pressed",
+					"objectClass": "Mando",
+					"sid": 579448945704264,
+					"parameters": {
+						"gamepad": "0",
+						"button": "d-pad-up"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 656991216957719,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 466262494600620,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"comparison": 4,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 116052528315236,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 974501908780248
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 434720723967862,
+					"parameters": {
+						"variable": "menu_seleccion",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 416386511377969
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_1",
+					"sid": 269480298244293,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_2",
+					"sid": 781250056841688,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_3",
+					"sid": 973010256046520,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_4",
+					"sid": 935096905638549,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				}
+			],
+			"sid": 185777179879568
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 345495131317255,
+					"parameters": {
+						"variable": "menu_seleccion",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 259631786951277
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_1",
+					"sid": 810078539869119,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_2",
+					"sid": 411876666862405,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_3",
+					"sid": 293844777824243,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_4",
+					"sid": 692354240427071,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				}
+			],
+			"sid": 983012730079701
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 351712310306281,
+					"parameters": {
+						"variable": "menu_seleccion",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 737080372064310
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_1",
+					"sid": 598091111261769,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_2",
+					"sid": 766273149012660,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_3",
+					"sid": 733387643021759,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_4",
+					"sid": 510833069628731,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				}
+			],
+			"sid": 517333159092525
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 663741552062560,
+					"parameters": {
+						"variable": "menu_seleccion",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 291791955087834
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_1",
+					"sid": 883794023869668,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_2",
+					"sid": 960372479060828,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_3",
+					"sid": 445348421883515,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BetterOutline\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "menu_opcion_4",
+					"sid": 248118981681076,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"BetterOutline\""
+					}
+				}
+			],
+			"sid": 774024952749970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 731400848502080,
+					"parameters": {
+						"variable": "menu_Activo",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 262437715658759,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Mando",
+							"sid": 934320222813848,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 911947243075893,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "alert(\"1\");"
+						}
+					],
+					"sid": 402037920110620
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Mando",
+							"sid": 379741841396797,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 766396191912025,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "alert(\"2\");"
+						}
+					],
+					"sid": 397885655479479
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Mando",
+							"sid": 837582343216889,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 164635034403230,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "alert(\"3\");"
+						}
+					],
+					"sid": 328546225597054
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Mando",
+							"sid": 616889378718483,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 947406124183688,
+							"parameters": {
+								"variable": "menu_seleccion",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "alert(\"4\");"
+						}
+					],
+					"sid": 776931670160245
+				}
+			]
+		}
+	],
+	"sid": 595385458750655
+}

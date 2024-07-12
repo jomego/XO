@@ -1,0 +1,19 @@
+{
+	"name": "menu",
+	"plugin-id": "Sprite",
+	"sid": 107963322446879,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
+	"members": [
+		"menu_opcion_1",
+		"menu_opcion_2",
+		"menu_opcion_3",
+		"menu_opcion_4"
+	]
+}
