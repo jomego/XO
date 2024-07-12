@@ -6,7 +6,7 @@
 			"name": "menu_Activo",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "comprobar si el menu esta activo",
+			"comment": "comprobar si el menu esta activo.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 324763543205819
