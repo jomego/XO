@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 39900,
+	"savedWithRelease": 40000,
 	"name": "menus",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -224,16 +224,7 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [
-				{
-					"name": "MEnuEstatico.jpg",
-					"type": "image/jpeg",
-					"sid": 770935267694237,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": []
 		}
 	},

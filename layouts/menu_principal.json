@@ -490,7 +490,40 @@
 		}
 	],
 	"scene-graphs-folder-root": {
-		"items": [],
+		"items": [
+			{
+				"sid": 544771064776227,
+				"expanded": true
+			},
+			{
+				"sid": 940469538201481,
+				"expanded": true
+			},
+			{
+				"sid": 631717986285795,
+				"expanded": true
+			},
+			{
+				"sid": 860795153480315,
+				"expanded": true
+			},
+			{
+				"sid": 130985722760813,
+				"expanded": true
+			},
+			{
+				"sid": 904595088450478,
+				"expanded": true
+			},
+			{
+				"sid": 621185431198906,
+				"expanded": true
+			},
+			{
+				"sid": 876058345538165,
+				"expanded": true
+			}
+		],
 		"subfolders": []
 	},
 	"sid": 264437316196912,
